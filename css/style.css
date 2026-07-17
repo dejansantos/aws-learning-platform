@@ -1,0 +1,595 @@
+/* =========================================================
+   AWS Learning Platform
+   Version : 1.0
+   Author  : Dejan Santos + ChatGPT
+
+   Arquivo:
+   style.css
+
+   Responsabilidade:
+   - Design System
+   - Reset Global
+   - Tipografia
+   - Componentes Básicos
+   - Utilitários
+
+========================================================= */
+
+
+:root{
+
+    /* AWS */
+
+    --aws-orange:#FF9900;
+    --aws-blue:#232F3E;
+    --aws-dark:#131A22;
+
+    /* Backgrounds */
+
+    --background:#F5F7FA;
+
+    --surface:#EEF2F7;
+
+    --card:#FFFFFF;
+
+    /* Typography */
+
+    --text:#2C3E50;
+
+    --text-light:#6B7280;
+
+    --text-muted:#9CA3AF;
+
+    /* Borders */
+
+    --border:#E5E7EB;
+
+    /* Primary */
+
+    --primary:var(--aws-orange);
+
+    --primary-hover:#E88B00;
+
+    /* Status */
+
+    --success:#2ECC71;
+
+    --warning:#F39C12;
+
+    --danger:#E74C3C;
+
+    /* Radius */
+
+    --radius:12px;
+
+    /* Shadow */
+
+    --shadow:0 8px 20px rgba(0,0,0,.08);
+
+    /* Animation */
+
+    --transition:.25s;
+
+    /* Sizes */
+
+    --sidebar-width:280px;
+
+    --navbar-height:70px;
+
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+
+    font-family:
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+a:hover{
+
+    opacity:.85;
+
+}
+
+
+/* =========================================================
+   LISTAS
+========================================================= */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+}
+
+h1{
+
+    font-size:2.2rem;
+
+}
+
+h2{
+
+    font-size:1.7rem;
+
+    margin-bottom:18px;
+
+}
+
+h3{
+
+    font-size:1.25rem;
+
+    margin-bottom:12px;
+
+}
+
+p{
+
+    color: var(--text);
+
+}
+
+li{
+
+    color: var(--text);
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container{
+
+    width:min(var(--container-width),95%);
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:40px 0;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.aws-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.aws-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.aws-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.aws-hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:40px;
+
+    margin-bottom:30px;
+
+    border-radius:var(--radius);
+
+    background:linear-gradient(
+        135deg,
+        var(--aws-blue),
+        var(--aws-dark)
+    );
+
+    color:#FFFFFF;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ------------------------------------------
+   Conteúdo
+------------------------------------------ */
+
+.aws-hero-content{
+
+    flex:1;
+
+}
+
+.aws-hero-icon{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:72px;
+
+    height:72px;
+
+    margin-bottom:20px;
+
+    font-size:38px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.aws-hero h1{
+
+    margin-bottom:15px;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+    line-height:1.2;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.25);
+
+}
+
+.aws-hero p{
+
+    max-width:650px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.05rem;
+
+    line-height:1.7;
+
+}
+
+/* ------------------------------------------
+   Cards da direita
+------------------------------------------ */
+
+.aws-hero-info{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.hero-stat{
+
+    min-width:130px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+
+    transition:var(--transition);
+
+}
+
+.hero-stat:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.hero-stat small{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#777;
+
+    font-size:.80rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.hero-stat strong{
+
+    display:block;
+
+    color:var(--aws-blue);
+
+    font-size:1.35rem;
+
+}
+
+/* ------------------------------------------
+   Responsivo
+------------------------------------------ */
+
+@media(max-width:992px){
+
+    .aws-hero{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .aws-hero-info{
+
+        width:100%;
+
+        justify-content:space-between;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .aws-hero{
+
+        padding:25px;
+
+    }
+
+    .aws-hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .aws-hero-info{
+
+        flex-direction:column;
+
+    }
+
+    .hero-stat{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+}
+
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}

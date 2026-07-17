@@ -1,0 +1,308 @@
+/* =========================================================
+   AWS Learning Platform
+   Version : 1.0
+   Arquivo : layout.css
+
+   Responsabilidade:
+   - Layout Principal
+   - Navbar
+   - Sidebar
+   - Main
+   - Footer
+   - Responsividade
+
+========================================================= */
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.aws-app{
+
+    display:grid;
+
+    grid-template-columns: var(--sidebar-width) 1fr;
+
+    grid-template-rows: var(--navbar-height) 1fr auto;
+
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar main"
+        "footer footer";
+
+    min-height:100vh;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.aws-navbar{
+
+    grid-area:navbar;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    background:var(--aws-blue);
+
+    color:var(--white);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.aws-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================================================
+   NAVBAR ACTIONS
+========================================================= */
+
+.aws-navbar-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.aws-sidebar{
+
+    grid-area:sidebar;
+
+    background:var(--aws-dark);
+
+    color:var(--white);
+
+    padding:24px;
+
+    overflow-y:auto;
+
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.aws-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.aws-menu a{
+
+    padding:12px 16px;
+
+    border-radius:8px;
+
+    transition:var(--transition);
+
+}
+
+.aws-menu a:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.aws-menu a.active{
+
+    background:var(--aws-orange);
+
+    color:var(--black);
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.aws-main{
+
+    grid-area:main;
+
+    padding:32px;
+
+    overflow:auto;
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.aws-page-header{
+
+    margin-bottom:32px;
+
+}
+
+
+/* =========================================================
+   CONTENT GRID
+========================================================= */
+
+.aws-grid{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+.aws-grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.aws-grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.aws-grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.aws-footer{
+
+    grid-area:footer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:var(--aws-blue);
+
+    color:var(--white);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1024px){
+
+    .aws-grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .aws-app{
+
+        grid-template-columns:1fr;
+
+        grid-template-areas:
+
+            "navbar"
+
+            "main"
+
+            "footer";
+
+    }
+
+    .aws-sidebar{
+
+        display:none;
+
+    }
+
+    .aws-main{
+
+        padding:20px;
+
+    }
+
+    .aws-grid-2,
+
+    .aws-grid-3,
+
+    .aws-grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

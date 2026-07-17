@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "titulo": "Fundamentos da Computação em Nuvem",
+    "arquivo": "aula1.json",
+    "quiz": "aula1-quiz.json",
+    "xp": 100
+  },
+  {
+    "id": 2,
+    "titulo": "Criando sua conta AWS",
+    "arquivo": "aula2.json",
+    "quiz": "aula2-quiz.json",
+    "xp": 100
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "id": 1,
+  "slug": "fundamentos-computacao-em-nuvem",
+  "titulo": "Fundamentos da Computação em Nuvem",
+  "subtitulo": "Conheça os conceitos essenciais da Cloud Computing e da arquitetura AWS.",
+  "nivel": "Iniciante",
+  "duracao": "40 minutos",
+  "xp": 100,
+  "categoria": "Cloud Fundamentals",
+  "icone": "☁️",
+  "status": "ativo",
+
+  "objetivos": [
+    "Compreender o conceito de computação em nuvem",
+    "Conhecer os modelos de serviço (IaaS, PaaS e SaaS)",
+    "Entender os modelos de implantação",
+    "Conhecer Regions e Availability Zones",
+    "Identificar os principais componentes de uma arquitetura AWS"
+  ],
+
+  "modulos": [
+    {
+      "id": 1,
+      "titulo": "O que é Computação em Nuvem",
+      "tipo": "conteudo",
+      "conteudo": [
+        "Computação em nuvem é o fornecimento de recursos de TI pela Internet.",
+        "Você paga apenas pelo que utiliza.",
+        "É possível aumentar ou diminuir recursos sob demanda."
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Modelos de Serviço",
+      "tipo": "conteudo",
+      "conteudo": [
+        "IaaS (Infrastructure as a Service)",
+        "PaaS (Platform as a Service)",
+        "SaaS (Software as a Service)"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Modelos de Implantação",
+      "tipo": "conteudo",
+      "conteudo": [
+        "Nuvem Pública",
+        "Nuvem Privada",
+        "Nuvem Híbrida"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Regions e Availability Zones",
+      "tipo": "conteudo",
+      "conteudo": [
+        "Uma Region é composta por vários datacenters.",
+        "Cada Availability Zone é isolada das demais.",
+        "Utilizar múltiplas AZs aumenta a disponibilidade."
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Arquitetura AWS para WordPress",
+      "tipo": "exemplo",
+      "conteudo": [
+        "EC2 para hospedar a aplicação.",
+        "EBS para armazenamento.",
+        "RDS MySQL para o banco de dados.",
+        "Security Groups como firewall.",
+        "Route 53 para DNS."
+      ]
+    }
+  ],
+
+  "laboratorio": {
+    "titulo": "Laboratório Mental",
+    "descricao": "Imagine que um cliente possui um site WordPress com 100 mil visitas por dia e 50 GB de imagens. Pense em quais serviços AWS seriam necessários para atender essa demanda."
+  },
+
+  "quiz": {
+    "arquivo": "aula1-quiz.json",
+    "questoes": 10,
+    "tempo": 900
+  },
+
+  "proximaAula": 2
+}
