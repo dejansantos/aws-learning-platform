@@ -12,6 +12,28 @@ O objetivo é ensinar Computação em Nuvem e AWS de forma progressiva, prática
 
 ---
 
+# 📚 Documentação
+
+Toda a documentação do projeto está organizada para facilitar a manutenção, evolução da plataforma e a colaboração futura.
+
+| Documento | Descrição |
+|-----------|-----------|
+| **README.md** | Visão geral da plataforma e instruções de uso |
+| **docs/ROADMAP.md** | Planejamento das Sprints e evolução do projeto |
+| **CHANGELOG.md** | Histórico de versões e alterações realizadas |
+| **VERSION** | Versão atual da plataforma |
+
+---
+
+## 📈 Status do Projeto
+
+| Item | Status |
+|------|--------|
+| 🚀 Versão | **0.1.0** |
+| 📚 Curso | Aula 1 em desenvolvimento |
+| 🛠️ Sprint Atual | Sprint 1 — Plataforma de Ensino |
+| 📅 Última atualização | Julho de 2026 |
+
 # 🎯 Objetivos do Projeto
 
 - Ensinar AWS do nível iniciante ao avançado.
